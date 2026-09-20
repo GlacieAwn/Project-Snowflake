@@ -1,0 +1,46 @@
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_BG_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_FLOATINGDEPTHS.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_GUSTYGARDEN.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/smg2_honeybloom_galaxy.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SOUNDBANK.sf2
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native32.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dylib
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.deps.json
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.runtimeconfig.json
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.pdb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall.DryWetMidi.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MeltySynth.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MonoGame.Framework.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/NVorbis.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm64/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-x64/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-x86/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/ios-arm64/native/libopenal.a
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/iossimulator-arm64/native/libopenal.a
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/iossimulator-x64/native/libopenal.a
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/linux-arm64/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/linux-x64/native/libopenal.so
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/osx/native/libopenal.dylib
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-arm64/native/openal.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/openal.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/linux-arm64/native/libSDL2-2.0.so.0
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/linux-x64/native/libSDL2-2.0.so.0
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/osx/native/libSDL2-2.0.0.dylib
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-arm64/native/SDL2.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/SDL2.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/mgcb.tool.restore
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.csproj.AssemblyReference.cache
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.GeneratedMSBuildEditorConfig.editorconfig
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.AssemblyInfoInputs.cache
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.AssemblyInfo.cs
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.csproj.CoreCompileInputs.cache
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project .B4855404.Up2Date
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/refint/Project Snowflake.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.pdb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.genruntimeconfig.cache
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/ref/Project Snowflake.dll
