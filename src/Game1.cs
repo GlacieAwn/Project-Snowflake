@@ -15,9 +15,11 @@ public class Game1 : Game
     private float scaleY;
     private Rectangle dst;
     private Texture2D _testTexture;
+    private Texture2D _playerTexture;
     private InputManager _inputManager;
     private MidiSynth _midiSynth;
     private MidiSequencer _midiSequencer;
+    private Player _player;
     enum GameState
     {
         Title,
@@ -27,7 +29,7 @@ public class Game1 : Game
         DebugMenu
     }
 
-    private GameState _currentState = GameState.Title;
+    private GameState _currentState = GameState.Playing;
 
     public Game1()
     {
@@ -40,15 +42,23 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        _graphics.IsFullScreen = true;
+        _graphics.IsFullScreen = false;
         _graphics.HardwareModeSwitch = false;
 
-        _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-        _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        if(_graphics.IsFullScreen)
+        {
+            _graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+        }
+        else
+        {
+            _graphics.PreferredBackBufferWidth = Global.WINDOW_WIDTH * 4; 
+            _graphics.PreferredBackBufferHeight = Global.WINDOW_HEIGHT * 4;
+        }
         
         _graphics.ApplyChanges();
 
-        _renderTarget = new RenderTarget2D(GraphicsDevice, 256, 144);
+        _renderTarget = new RenderTarget2D(GraphicsDevice, Global.SCREEN_WIDTH, Global.SCREEN_HEIGHT);
         _inputManager = new InputManager();
 
         base.Initialize();
@@ -57,19 +67,23 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        _testTexture = this.Content.Load<Texture2D>("GFX/SPR_BG_TEST");
+        _testTexture = Content.Load<Texture2D>("GFX/SPR_BG_TEST");
+        _playerTexture = Content.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
+        _player = new Player(new Vector2(0 * Global.TILE_SIZE, 0 * Global.TILE_SIZE), _playerTexture); // Construct player after texture is loaded to avoid null reference
+
 
         string bgmDirectory = System.IO.Path.Combine(Content.RootDirectory, "BGM");
         _midiSynth = new MidiSynth(System.IO.Path.Combine(bgmDirectory, "SOUNDBANK.sf2"));
         _midiSequencer = new MidiSequencer(_midiSynth);
 
-        var song = MidiFileLoader.Load(System.IO.Path.Combine(bgmDirectory, "smg2_honeybloom_galaxy.mid"));
+        // var song = MidiFileLoader.Load(System.IO.Path.Combine(bgmDirectory, "smg2_honeybloom_galaxy.mid"));
         // _midiSequencer.Play(song, loop: true);
     }
 
     protected override void UnloadContent()
     {
         _midiSynth?.Dispose();
+        _player?.Dispose();
     }
 
     protected override void Update(GameTime gameTime)
@@ -104,6 +118,7 @@ public class Game1 : Game
             case GameState.Playing:
                 // Handle gameplay logic
                 Console.WriteLine("Playing Screen");
+                _player.Update(gameTime, _inputManager);
                 break;
             case GameState.Paused:
                 // Handle paused logic
@@ -126,43 +141,45 @@ public class Game1 : Game
 
         // TODO: Add your drawing code here
         _spriteBatch.Begin();
-        _spriteBatch.Draw(_testTexture, Vector2.Zero, Color.White);
-        //TODO: Set up drawing based on states
-        // switch (_currentState)
-        // {
-        //     case GameState.Title:
-        //         // Draw title screen
-        //         break;
-        //     case GameState.Menu:
-        //         // Draw menu
-        //         break;
-        //     case GameState.Playing:
-        //         // Draw gameplay
-        //         break;
-        //     case GameState.Paused:
-        //         // Draw paused screen
-        //         break;
-        //     case GameState.DebugMenu:
-        //         // Draw debug menu
-        //         break;
-        // }   
+        // _spriteBatch.Draw(_testTexture, Vector2.Zero, Color.White);
+        switch (_currentState)
+        {
+            case GameState.Title:
+                // Draw title screen
+                break;
+            case GameState.Menu:
+                // Draw menu
+                break;
+            case GameState.Playing:
+                // Draw gameplay
+                _player.Draw(_spriteBatch);
+                break;
+            case GameState.Paused:
+                // Draw paused screen
+                break;
+            case GameState.DebugMenu:
+                // Draw debug menu
+                break;
+        }   
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);
 
-        scaleX = (float)_graphics.PreferredBackBufferWidth / 256f;
-        scaleY = (float)_graphics.PreferredBackBufferHeight / 144f;
+        scaleX = (float)_graphics.PreferredBackBufferWidth / Global.SCREEN_WIDTH;
+        scaleY = (float)_graphics.PreferredBackBufferHeight / Global.SCREEN_HEIGHT;
         float scale = Math.Min(scaleX, scaleY);
+        
+        dst = new Rectangle((GraphicsDevice.PresentationParameters.BackBufferWidth - (int)(Global.SCREEN_WIDTH * scale)) / 2, (GraphicsDevice.PresentationParameters.BackBufferHeight - (int)(Global.SCREEN_HEIGHT * scale)) / 2, (int)(Global.SCREEN_WIDTH * scale), (int)(Global.SCREEN_HEIGHT * scale));
         GraphicsDevice.Clear(Color.Black);
 
-        dst = new Rectangle((GraphicsDevice.PresentationParameters.BackBufferWidth - (int)(256 * scale)) / 2, (GraphicsDevice.PresentationParameters.BackBufferHeight - (int)(144 * scale)) / 2, (int)(256 * scale), (int)(144 * scale));
+        dst = new Rectangle((GraphicsDevice.PresentationParameters.BackBufferWidth - (int)(Global.SCREEN_WIDTH * scale)) / 2, (GraphicsDevice.PresentationParameters.BackBufferHeight - (int)(Global.SCREEN_HEIGHT * scale)) / 2, (int)(Global.SCREEN_WIDTH * scale), (int)(Global.SCREEN_HEIGHT * scale));
 
 
         _spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp);
         // Rectangle screenBounds = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.BackBufferWidth, GraphicsDevice.PresentationParameters.BackBufferHeight);
         _spriteBatch.Draw(_renderTarget, dst, Color.White);
         _spriteBatch.End();
-        Console.WriteLine($"{_graphics.PreferredBackBufferWidth}x{_graphics.PreferredBackBufferHeight}, scale {scale}, dst {dst}");
+        Console.WriteLine($"{_graphics.PreferredBackBufferWidth}x{_graphics.PreferredBackBufferHeight}, scaleX {scaleX}, scaleY {scaleY}, dst {dst}");
 
         base.Draw(gameTime);
     }

@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/GFX/SPR_BG_TEST.png","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/GFX/SPR_BG_TEST.xnb","TextureProcessor","Texture2DContent",1559,147541,0.053649
+"/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/GFX/SPR_SNOWFLAKE_STATIC.png","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb","TextureProcessor","Texture2DContent",233,1109,0.04629

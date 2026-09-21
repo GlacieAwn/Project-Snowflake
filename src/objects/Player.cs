@@ -36,4 +36,9 @@ public sealed class Player
     {
         spriteBatch.Draw(texture, position, Color.White);
     }
+
+    public void Dispose()
+    {
+        texture?.Dispose();
+    }
 }
