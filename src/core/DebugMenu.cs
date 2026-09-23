@@ -11,16 +11,16 @@ namespace Project_Snowflake
         private int _selectedIndex;
         private Texture2D _arrow;
 
-        const int MENU_SPACING = 16;
+        const int MENU_SPACING = 32;
 
-        public DebugMenu(string[] options, GraphicsDevice graphicsDevice)
+        public DebugMenu(GraphicsDevice graphicsDevice)
         {
-            _options = options;
+            _options = new string[] {"MAP_COLLISION_TEST", "TITLE", "MUSIC_TEST", "SFX_TEST", "MIDI_TEST"};
             _selectedIndex = 0;
             _arrow = Texture2D.FromFile(graphicsDevice, "Content/GFX/SPR_ARROW.png");
         }
 
-        public void Update(InputManager inputManager, Global.GameState gameState)
+        public void Update(InputManager inputManager, ref Global.GameState gameState)
         {
             if (inputManager.IsKeyPressed(Keys.W))
             {
@@ -36,6 +36,23 @@ namespace Project_Snowflake
                 // Handle the action for the first menu option
                 gameState = Global.GameState.Playing;
             }
+            if (_selectedIndex == 1 && inputManager.IsKeyPressed(Keys.Enter))
+            {
+                // Handle the action for the second menu option
+                gameState = Global.GameState.Title;
+            }
+            if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter))
+            {
+                // Handle the action for the third menu option
+            }
+            if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter))
+            {
+                // Handle the action for the fourth menu option
+            }
+            if (_selectedIndex == 4 && inputManager.IsKeyPressed(Keys.Enter))
+            {
+                // Handle the action for the fifth menu option
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch, SpriteFont font, Vector2 position)
@@ -43,10 +60,10 @@ namespace Project_Snowflake
             for (int i = 0; i < _options.Length; i++)
             {
                 Color color = Color.White;
-                spriteBatch.DrawString(font, _options[i], position + new Vector2(0, i * MENU_SPACING), color);
+                spriteBatch.DrawString(font, _options[i], position + new Vector2(32, i * MENU_SPACING), color);
                 if (i == _selectedIndex)
                 {
-                    spriteBatch.Draw(_arrow, position + new Vector2(-16, i * MENU_SPACING), Color.White);
+                    spriteBatch.Draw(_arrow, position + new Vector2(0, i * MENU_SPACING), Color.White);
                 }
             }
         }

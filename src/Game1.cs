@@ -57,7 +57,7 @@ public class Game1 : Game
 
         _renderTarget = new RenderTarget2D(GraphicsDevice, Global.SCREEN_WIDTH, Global.SCREEN_HEIGHT);
         _inputManager = new InputManager();
-        _debugMenu = new DebugMenu(new string[] {"MAP_COLLISION_TEST", "MAP_01", "MAP_02", "MAP_03", "MAP_04", "MAP_05", "MAP_06", "TITLE"}, GraphicsDevice);
+        _debugMenu = new DebugMenu(GraphicsDevice);
         _font = Content.Load<SpriteFont>("FONTS/silkscreen");
 
         base.Initialize();
@@ -120,7 +120,7 @@ public class Game1 : Game
             case Global.GameState.DebugMenu:
                 // Handle debug menu logic
                 // Console.WriteLine("Debug Menu Screen");
-                _debugMenu.Update(_inputManager, _currentState);
+                _debugMenu.Update(_inputManager, ref _currentState);
                 break;
         }
 
@@ -158,7 +158,7 @@ public class Game1 : Game
             case Global.GameState.DebugMenu:
                 // Draw debug menu
                 GraphicsDevice.Clear(Color.Black);
-                _debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10));
+                // _debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10));
                 break;
         }   
         _spriteBatch.End();
@@ -178,6 +178,27 @@ public class Game1 : Game
         _spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp);
         // Rectangle screenBounds = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.BackBufferWidth, GraphicsDevice.PresentationParameters.BackBufferHeight);
         _spriteBatch.Draw(_renderTarget, dst, Color.White);
+        switch (_currentState)
+        {
+            case Global.GameState.Title:
+                //NOT USED OUTSIDE OF RENDER TARGET
+                break;
+            case Global.GameState.Menu:
+                //NOT USED OUTSIDE OF RENDER TARGET
+
+                break;
+            case Global.GameState.Playing:
+                //NOT USED OUTSIDE OF RENDER TARGET
+                break;
+            case Global.GameState.Paused:
+                //NOT USED OUTSIDE OF RENDER TARGET
+                break;
+            case Global.GameState.DebugMenu:
+                // Draw debug menu
+                GraphicsDevice.Clear(Color.Black);
+                _debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10));
+                break;
+        }  
         _spriteBatch.End();
         // Console.WriteLine($"{_graphics.PreferredBackBufferWidth}x{_graphics.PreferredBackBufferHeight}, scaleX {scaleX}, scaleY {scaleY}, dst {dst}");
 
