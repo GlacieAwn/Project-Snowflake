@@ -1,9 +1,13 @@
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/slkscr.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ARROW.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_BG_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_COLLISION_TEST.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_FLOATINGDEPTHS.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_GUSTYGARDEN.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/smg2_honeybloom_galaxy.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SOUNDBANK.sf2
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_COLLISION_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native32.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dylib
@@ -16,6 +20,7 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MeltySynth.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MonoGame.Framework.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/NVorbis.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/TiledCS.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm/native/libopenal.so
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm64/native/libopenal.so
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-x64/native/libopenal.so
@@ -45,3 +50,4 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.pdb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.genruntimeconfig.cache
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/ref/Project Snowflake.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/silkscreen.xnb

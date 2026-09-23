@@ -27,12 +27,19 @@
     <PackageReference Include="MeltySynth" Version="2.4.1" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
+    <PackageReference Include="TiledCS" Version="3.3.3" />
   </ItemGroup>
   <ItemGroup>
     <!-- Raw MIDI/SoundFont assets, copied as-is instead of going through the MGCB content pipeline -->
     <None Include="Content/BGM/**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Link>Content/BGM/%(RecursiveDir)%(Filename)%(Extension)</Link>
+    </None>
+    
+    <!-- Raw Tiled map assets, copied as-is instead of going through the MGCB content pipeline -->
+    <None Include="Content/TILEMAPS/**/*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>Content/TILEMAPS/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </None>
   </ItemGroup>
 </Project>

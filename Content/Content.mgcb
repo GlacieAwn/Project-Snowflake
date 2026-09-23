@@ -13,6 +13,35 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin FONTS/silkscreen.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/processorParam:Version=3.8.5.1
+/build:FONTS/silkscreen.spritefont
+
+#begin FONTS/slkscr.ttf
+/importer:FontImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/processorParam:Version=3.8.5.1
+/build:FONTS/slkscr.ttf
+
+#begin GFX/SPR_ARROW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.1
+/build:GFX/SPR_ARROW.png
+
 #begin GFX/SPR_BG_TEST.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -25,6 +54,19 @@
 /processorParam:TextureFormat=Color
 /processorParam:Version=3.8.5.1
 /build:GFX/SPR_BG_TEST.png
+
+#begin GFX/SPR_COLLISION_TEST.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/processorParam:Version=3.8.5.1
+/build:GFX/SPR_COLLISION_TEST.png
 
 #begin GFX/SPR_SNOWFLAKE_STATIC.png
 /importer:TextureImporter

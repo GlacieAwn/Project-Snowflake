@@ -10,4 +10,13 @@ public static class Global
     public const int WINDOW_WIDTH = 256;
     public const int WINDOW_HEIGHT = 144;
 
+    public enum GameState
+    {
+        Title,
+        Menu,
+        Playing,
+        Paused,
+        DebugMenu
+    }
+
 }

@@ -20,16 +20,13 @@ public class Game1 : Game
     private MidiSynth _midiSynth;
     private MidiSequencer _midiSequencer;
     private Player _player;
-    enum GameState
-    {
-        Title,
-        Menu,
-        Playing,
-        Paused,
-        DebugMenu
-    }
+    private DebugMenu _debugMenu;
+    private SpriteFont _font;
 
-    private GameState _currentState = GameState.Playing;
+    private Tilemap _test_tilemap;
+
+
+    private Global.GameState _currentState = Global.GameState.DebugMenu;
 
     public Game1()
     {
@@ -60,6 +57,8 @@ public class Game1 : Game
 
         _renderTarget = new RenderTarget2D(GraphicsDevice, Global.SCREEN_WIDTH, Global.SCREEN_HEIGHT);
         _inputManager = new InputManager();
+        _debugMenu = new DebugMenu(new string[] {"MAP_COLLISION_TEST", "MAP_01", "MAP_02", "MAP_03", "MAP_04", "MAP_05", "MAP_06", "TITLE"}, GraphicsDevice);
+        _font = Content.Load<SpriteFont>("FONTS/silkscreen");
 
         base.Initialize();
     }
@@ -69,12 +68,13 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         _testTexture = Content.Load<Texture2D>("GFX/SPR_BG_TEST");
         _playerTexture = Content.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
-        _player = new Player(new Vector2(0 * Global.TILE_SIZE, 0 * Global.TILE_SIZE), _playerTexture); // Construct player after texture is loaded to avoid null reference
+        _test_tilemap = new Tilemap("Content/TILEMAPS/MAP_COLLISION_TEST.tmx", "Content/GFX/SPR_COLLISION_TEST.png", GraphicsDevice);    
+        _player = new Player(new Vector2(1 * Global.TILE_SIZE, 1 * Global.TILE_SIZE), _playerTexture, _test_tilemap); // Construct player after texture is loaded to avoid null reference
 
 
-        string bgmDirectory = System.IO.Path.Combine(Content.RootDirectory, "BGM");
-        _midiSynth = new MidiSynth(System.IO.Path.Combine(bgmDirectory, "SOUNDBANK.sf2"));
-        _midiSequencer = new MidiSequencer(_midiSynth);
+        // string bgmDirectory = System.IO.Path.Combine(Content.RootDirectory, "BGM");
+        // _midiSynth = new MidiSynth(System.IO.Path.Combine(bgmDirectory, "SOUNDBANK.sf2"));
+        // _midiSequencer = new MidiSequencer(_midiSynth);
 
         // var song = MidiFileLoader.Load(System.IO.Path.Combine(bgmDirectory, "smg2_honeybloom_galaxy.mid"));
         // _midiSequencer.Play(song, loop: true);
@@ -82,55 +82,50 @@ public class Game1 : Game
 
     protected override void UnloadContent()
     {
-        _midiSynth?.Dispose();
+        // _midiSynth?.Dispose();
         _player?.Dispose();
     }
 
     protected override void Update(GameTime gameTime)
     {
         _inputManager.Update();
-        _midiSequencer.Update();
+        // _midiSequencer.Update();
         
         if (_inputManager.IsButtonPressed(Buttons.Back) || _inputManager.IsKeyPressed(Keys.Escape))
             Exit();
 
         if(_inputManager.IsKeyPressed(Keys.F1))
-            _currentState = GameState.DebugMenu;
-        else if (_inputManager.IsKeyPressed(Keys.Enter))
-        {
-            _currentState++;
-            if (_currentState > GameState.DebugMenu)
-                _currentState = GameState.Title;
-        }
-
+            _currentState = Global.GameState.DebugMenu;
 
         // TODO: Add your update logic here
         switch (_currentState)
         {
-            case GameState.Title:
+            case Global.GameState.Title:
                 // Handle title screen logic
                 // Console.WriteLine("Title Screen");
                 break;
-            case GameState.Menu:
+            case Global.GameState.Menu:
                 // Handle menu logic
-                Console.WriteLine("Menu Screen");
+                // Console.WriteLine("Menu Screen");
                 break;
-            case GameState.Playing:
+            case Global.GameState.Playing:
                 // Handle gameplay logic
-                Console.WriteLine("Playing Screen");
+                // Console.WriteLine("Playing Screen");
                 _player.Update(gameTime, _inputManager);
                 break;
-            case GameState.Paused:
+            case Global.GameState.Paused:
                 // Handle paused logic
-                Console.WriteLine("Paused Screen");
+                // Console.WriteLine("Paused Screen");
                 break;
-            case GameState.DebugMenu:
+            case Global.GameState.DebugMenu:
                 // Handle debug menu logic
-                Console.WriteLine("Debug Menu Screen");
+                // Console.WriteLine("Debug Menu Screen");
+                _debugMenu.Update(_inputManager, _currentState);
                 break;
         }
 
         base.Update(gameTime);
+        Console.WriteLine(_currentState);
     }
 
     protected override void Draw(GameTime gameTime)
@@ -144,21 +139,26 @@ public class Game1 : Game
         // _spriteBatch.Draw(_testTexture, Vector2.Zero, Color.White);
         switch (_currentState)
         {
-            case GameState.Title:
+            case Global.GameState.Title:
                 // Draw title screen
                 break;
-            case GameState.Menu:
+            case Global.GameState.Menu:
                 // Draw menu
                 break;
-            case GameState.Playing:
+            case Global.GameState.Playing:
                 // Draw gameplay
+                GraphicsDevice.SetRenderTarget(_renderTarget);
+                GraphicsDevice.Clear(Color.Black);
+                _test_tilemap.Draw(_spriteBatch);
                 _player.Draw(_spriteBatch);
                 break;
-            case GameState.Paused:
+            case Global.GameState.Paused:
                 // Draw paused screen
                 break;
-            case GameState.DebugMenu:
+            case Global.GameState.DebugMenu:
                 // Draw debug menu
+                GraphicsDevice.Clear(Color.Black);
+                _debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10));
                 break;
         }   
         _spriteBatch.End();
@@ -179,7 +179,7 @@ public class Game1 : Game
         // Rectangle screenBounds = new Rectangle(0, 0, GraphicsDevice.PresentationParameters.BackBufferWidth, GraphicsDevice.PresentationParameters.BackBufferHeight);
         _spriteBatch.Draw(_renderTarget, dst, Color.White);
         _spriteBatch.End();
-        Console.WriteLine($"{_graphics.PreferredBackBufferWidth}x{_graphics.PreferredBackBufferHeight}, scaleX {scaleX}, scaleY {scaleY}, dst {dst}");
+        // Console.WriteLine($"{_graphics.PreferredBackBufferWidth}x{_graphics.PreferredBackBufferHeight}, scaleX {scaleX}, scaleY {scaleY}, dst {dst}");
 
         base.Draw(gameTime);
     }
