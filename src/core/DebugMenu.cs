@@ -43,7 +43,7 @@ namespace Project_Snowflake
             }
             if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter))
             {
-                // Handle the action for the third menu option
+                AudioManager.PlayMusic("BGM_TEST", true);
             }
             if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter))
             {

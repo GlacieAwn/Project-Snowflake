@@ -13,6 +13,13 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin BGM/BGM_TEST.ogg
+/importer:OggImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/processorParam:Version=3.8.5.1
+/build:BGM/BGM_TEST.ogg
+
 #begin FONTS/silkscreen.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

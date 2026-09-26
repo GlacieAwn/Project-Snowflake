@@ -1,4 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/BGM/BGM_TEST.ogg","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/BGM/BGM_TEST.xnb","SongProcessor","SongContent",2294731,126,0.820043
 "/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/FONTS/silkscreen.spritefont","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/FONTS/silkscreen.xnb","FontDescriptionProcessor","SpriteFontContent",2013,21529,0.079298
 "/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/FONTS/slkscr.ttf","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/FONTS/slkscr.xnb","FontDescriptionProcessor","SpriteFontContent",7636,21529,0.007087
 "/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/GFX/SPR_ARROW.png","/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/bin/DesktopGL/Content/GFX/SPR_ARROW.xnb","TextureProcessor","Texture2DContent",151,1109,0.043798

@@ -31,9 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <!-- Raw MIDI/SoundFont assets, copied as-is instead of going through the MGCB content pipeline -->
-    <None Include="Content/BGM/**/*.*">
+    <None Include="Content/MIDI/**/*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Link>Content/BGM/%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <Link>Content/MIDI/%(RecursiveDir)%(Filename)%(Extension)</Link>
     </None>
     
     <!-- Raw Tiled map assets, copied as-is instead of going through the MGCB content pipeline -->

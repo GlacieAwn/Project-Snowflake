@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/BGM/BGM_TEST.ogg</File>
     <File>/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/FONTS/silkscreen.spritefont</File>
     <File>/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/FONTS/slkscr.ttf</File>
     <File>/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/GFX/SPR_ARROW.png</File>
@@ -12,6 +13,7 @@
     <File>/Users/glacie/proj/Monogame Projects/Project Snowflake/Content/GFX/SPR_SNOWFLAKE_STATIC.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

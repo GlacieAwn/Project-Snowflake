@@ -3,10 +3,6 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_BG_TEST.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_COLLISION_TEST.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_FLOATINGDEPTHS.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SEQ_GUSTYGARDEN.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/smg2_honeybloom_galaxy.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/SOUNDBANK.sf2
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_COLLISION_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native32.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dll
@@ -51,3 +47,9 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.genruntimeconfig.cache
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/ref/Project Snowflake.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/silkscreen.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.ogg
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_FLOATINGDEPTHS.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_GUSTYGARDEN.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/smg2_honeybloom_galaxy.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SOUNDBANK.sf2

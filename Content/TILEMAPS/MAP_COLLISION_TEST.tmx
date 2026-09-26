@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
- <tileset firstgid="1" source="test_tileset.tsx"/>
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="10" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="4">
+ <tileset firstgid="1" source="../../../../../test_tileset.tsx"/>
  <layer id="1" name="Ground" width="10" height="9">
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,
@@ -27,5 +27,9 @@
 2,2,2,2,2,2,2,2,2,2
 </data>
  </layer>
- <objectgroup id="3" name="Player_Start"/>
+ <objectgroup color="#00a2ff" id="3" name="Objects">
+  <object id="1" name="Player_Start" x="64" y="96">
+   <point/>
+  </object>
+ </objectgroup>
 </map>
