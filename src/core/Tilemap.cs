@@ -9,6 +9,7 @@ public class Tilemap
 {
     private TiledMap _map;
     private TiledLayer _collisionLayer;
+    private TiledLayer _objectLayer;
     private Texture2D _mapRender;
 
     public Tilemap(string mapPath, String mapRenderPath, GraphicsDevice graphicsDevice)
@@ -17,6 +18,7 @@ public class Tilemap
         _mapRender = Texture2D.FromFile(graphicsDevice, mapRenderPath);
 
         _collisionLayer = _map.Layers.First(layer => layer.name == "Collision");
+        _objectLayer = _map.Layers.First(layer => layer.name == "Objects");
     }
 
     public bool IsSolid(int x, int y)
@@ -33,6 +35,17 @@ public class Tilemap
         int gid = _collisionLayer.data[index];
 
         return gid != 0;
+    }
+
+    public TiledObject GetObject(string name)
+    {
+        return _objectLayer.objects.First(obj => obj.name == name);
+    }
+
+    public Vector2 GetObjectPosition(string name)
+    {
+        TiledObject obj = GetObject(name);
+        return new Vector2(obj.x, obj.y);
     }
 
     public void Draw(SpriteBatch spriteBatch)

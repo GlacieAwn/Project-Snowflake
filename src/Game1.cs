@@ -69,7 +69,7 @@ public class Game1 : Game
         _testTexture = Content.Load<Texture2D>("GFX/SPR_BG_TEST");
         _playerTexture = Content.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
         _test_tilemap = new Tilemap("Content/TILEMAPS/MAP_COLLISION_TEST.tmx", "Content/GFX/SPR_COLLISION_TEST.png", GraphicsDevice);    
-        _player = new Player(new Vector2(1 * Global.TILE_SIZE, 1 * Global.TILE_SIZE), _playerTexture, _test_tilemap); // Construct player after texture is loaded to avoid null reference
+        _player = new Player(_test_tilemap.GetObjectPosition("Player_Start"), _playerTexture, _test_tilemap); // Construct player after texture is loaded to avoid null reference
 
 
         // string bgmDirectory = System.IO.Path.Combine(Content.RootDirectory, "BGM");
