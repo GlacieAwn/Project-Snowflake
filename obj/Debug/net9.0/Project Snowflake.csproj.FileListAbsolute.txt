@@ -1,7 +1,6 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/slkscr.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ARROW.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_BG_TEST.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_COLLISION_TEST.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_COLLISION_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native32.dll
@@ -53,3 +52,4 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_GUSTYGARDEN.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/smg2_honeybloom_galaxy.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SOUNDBANK.sf2
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_COLLISION_TEST.xnb

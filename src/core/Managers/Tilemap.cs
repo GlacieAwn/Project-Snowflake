@@ -52,4 +52,12 @@ public class Tilemap
     {
         spriteBatch.Draw(_mapRender, Vector2.Zero, Color.White);
     }
+
+    public void Dispose()
+    {
+        _mapRender?.Dispose();
+        _mapRender = null;
+        _collisionLayer = null;
+        _map = null;
+    }
 }
