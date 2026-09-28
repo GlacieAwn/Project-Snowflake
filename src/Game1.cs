@@ -68,7 +68,7 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         _testTexture = Content.Load<Texture2D>("GFX/SPR_BG_TEST");
         _playerTexture = Content.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
-        _test_tilemap = new Tilemap("Content/TILEMAPS/MAP_COLLISION_TEST.tmx", "Content/GFX/SPR_COLLISION_TEST.png", GraphicsDevice);    
+        _test_tilemap = new Tilemap("Content/TILEMAPS/MAP_COLLISION_TEST.tmx", "Content/GFX/MAPS/MAP_COLLISION_TEST.png", GraphicsDevice);    
         _player = new Player(_test_tilemap.GetObjectPosition("Player_Start"), _playerTexture, _test_tilemap); // Construct player after texture is loaded to avoid null reference
 
 
