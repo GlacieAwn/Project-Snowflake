@@ -20,7 +20,7 @@ namespace Project_Snowflake
             _arrow = Texture2D.FromFile(graphicsDevice, "Content/GFX/SPR_ARROW.png");
         }
 
-        public void Update(InputManager inputManager, ref Global.GameState gameState)
+        public void Update(InputManager inputManager, ref Global.GameState gameState, ref LevelManager.Level currentLevel)
         {
             if (inputManager.IsKeyPressed(Keys.W))
             {
@@ -33,7 +33,6 @@ namespace Project_Snowflake
 
             if (_selectedIndex == 0 && inputManager.IsKeyPressed(Keys.Enter))
             {
-                // Handle the action for the first menu option
                 gameState = Global.GameState.Playing;
             }
             if (_selectedIndex == 1 && inputManager.IsKeyPressed(Keys.Enter))

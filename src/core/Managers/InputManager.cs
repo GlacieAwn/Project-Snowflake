@@ -53,5 +53,9 @@ namespace Project_Snowflake
             return !_currentGamepad.IsButtonDown(button)
                 && _previousGamepad.IsButtonDown(button);
         }
+        public bool IsAnyKeyReleased()
+        {
+            return _previousKeyboard.GetPressedKeys().Length > 0 && _currentKeyboard.GetPressedKeys().Length == 0;
+        }
     }
 }

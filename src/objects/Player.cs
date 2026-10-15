@@ -1,6 +1,8 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Content;
+
 
 using System;
 
@@ -12,58 +14,64 @@ public sealed class Player
     private Vector2 _position;
     private Texture2D _texture;
     private Tilemap _tilemap;
+    private Vector2 _direction;
+    private ObjectManager _objectManager;
+    private ContentManager _contentManager;
 
-    public Player(Vector2 startPosition, Texture2D startTexture, Tilemap tilemap)
+    public Player(Vector2 startPosition, Tilemap tilemap, ObjectManager objectManager, ContentManager contentManager)
     {
-        _position = startPosition;
-        _texture = startTexture;
+        _position = startPosition; 
         _tilemap = tilemap;
+        _direction = Vector2.Zero;
+        _objectManager = objectManager;
+        _contentManager = contentManager;
+        _texture = contentManager.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
     }
 
-public void Update(GameTime gameTime, InputManager inputManager)
+    public void Update(GameTime gameTime, InputManager inputManager)
 {
+
+    _direction = Vector2.Zero;
+
     if (inputManager.IsKeyPressed(Keys.W))
     {
-        int targetX = (int)_position.X;
-        int targetY = (int)_position.Y - Global.TILE_SIZE;
-
-        if (!_tilemap.IsSolid(targetX, targetY))
-        {
-            _position.Y -= Global.TILE_SIZE;
-        }
+        _direction = new Vector2(0, -1);
     }
-
-    if (inputManager.IsKeyPressed(Keys.S))
+    else if (inputManager.IsKeyPressed(Keys.S))
     {
-        int targetX = (int)_position.X;
-        int targetY = (int)_position.Y + Global.TILE_SIZE;
-
-        if (!_tilemap.IsSolid(targetX, targetY))
-        {
-            _position.Y += Global.TILE_SIZE;
-        }
+        _direction = new Vector2(0, 1);
     }
-
-    if (inputManager.IsKeyPressed(Keys.A))
+    else if (inputManager.IsKeyPressed(Keys.A))
     {
-        int targetX = (int)_position.X - Global.TILE_SIZE;
-        int targetY = (int)_position.Y;
-
-        if (!_tilemap.IsSolid(targetX, targetY))
-        {
-            _position.X -= Global.TILE_SIZE;
-        }
+        _direction = new Vector2(-1, 0);
     }
-
-    if (inputManager.IsKeyPressed(Keys.D))
+    else if (inputManager.IsKeyPressed(Keys.D))
     {
-        int targetX = (int)_position.X + Global.TILE_SIZE;
-        int targetY = (int)_position.Y;
+        _direction = new Vector2(1, 0);
+    }
+    // handle movement based on direction *and* collision checks
+    if (_direction != Vector2.Zero)
+    {
+        int targetX = (int)(_position.X + _direction.X * Global.TILE_SIZE);
+        int targetY = (int)(_position.Y + _direction.Y * Global.TILE_SIZE);
 
-        if (!_tilemap.IsSolid(targetX, targetY))
+        Vector2 targetPosition = new Vector2(targetX, targetY);
+
+        GameObject gameObject = _objectManager.GetObjectAtPosition(targetPosition);
+
+        if (gameObject is MoveableBlock block)
         {
-            _position.X += Global.TILE_SIZE;
+            if (block.Move(_direction))
+            {
+                _position = targetPosition;
+            }
         }
+        else if (!_tilemap.IsSolid(targetX, targetY))
+        {
+            _position += _direction * Global.TILE_SIZE;
+            
+        }
+        
     }
 }
     public void Draw(SpriteBatch spriteBatch)

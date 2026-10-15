@@ -53,3 +53,6 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/smg2_honeybloom_galaxy.mid
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SOUNDBANK.sf2
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_COLLISION_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ICE_BLOCK.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_BLOCK_TEST.tmx
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_BLOCK_TEST.xnb
