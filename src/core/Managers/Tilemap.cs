@@ -1,9 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Linq;
-using System.Reflection.Metadata;
 using TiledCS;
 
 namespace Project_Snowflake
@@ -49,6 +47,10 @@ namespace Project_Snowflake
                 {
                     MoveableBlock block = new MoveableBlock(new Vector2(obj.x, obj.y), this, objectManager, contentManager);
                 }
+                else if (obj.type == "PatrolEnemy" || obj.@class == "PatrolEnemy")
+                {
+                    PatrolEnemy enemy = new PatrolEnemy(new Vector2(obj.x, obj.y), new Vector2(1, 0), 2, contentManager);
+                }
             }
         }
 
@@ -83,8 +85,8 @@ namespace Project_Snowflake
                         int tileHeight = _map.TileHeight;
                         int tilesetWidth = _tileset.Width;
 
-                        int sourceX = ((gid - 1) * tileWidth) % tilesetWidth;
-                        int sourceY = ((gid - 1) * tileWidth) / tilesetWidth * tileHeight;
+                        int sourceX = (gid - 1) * tileWidth % tilesetWidth;
+                        int sourceY = (gid - 1) * tileWidth / tilesetWidth * tileHeight;
 
                         Rectangle sourceRect = new Rectangle(sourceX, sourceY, tileWidth, tileHeight);
                         Vector2 position = new Vector2(x * tileWidth, y * tileHeight);
