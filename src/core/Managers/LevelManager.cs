@@ -24,7 +24,7 @@ namespace Project_Snowflake
         public Tilemap _currentTilemap;
 
         public  string _mapPath;
-        public  string _mapRenderPath;
+        public  string _tilesetPath;
 
         public  void LoadLevel(Level level)
         {
@@ -36,8 +36,8 @@ namespace Project_Snowflake
             UnloadLevel();
             _currentLevel = level;
             _mapPath = $"Content/TILEMAPS/MAP_{level}.tmx";
-            _mapRenderPath = $"Content/GFX/MAPS/MAP_{level}.png";
-            _currentTilemap = new Tilemap(_mapPath, _mapRenderPath, graphicsDevice);
+            _tilesetPath = $"Content/TILEMAPS/test_tileset.png";
+            _currentTilemap = new Tilemap(_mapPath, _tilesetPath, graphicsDevice);
         }
 
         public  void UnloadLevel()
@@ -45,7 +45,7 @@ namespace Project_Snowflake
             _currentTilemap?.Dispose();
             _currentTilemap = null;
             _mapPath = null;
-            _mapRenderPath = null;
+            _tilesetPath = null;
         }
 
         public void ReloadLevel()

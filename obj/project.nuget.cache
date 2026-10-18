@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "aKY4+i8cEfY=",
+  "dgSpecHash": "QBY8niJlebQ=",
   "success": true,
   "projectFilePath": "/Users/glacie/proj/Monogame Projects/Project Snowflake/Project Snowflake.csproj",
   "expectedPackageFiles": [
+    "/Users/glacie/.nuget/packages/libopenmpt.net/0.8.6/libopenmpt.net.0.8.6.nupkg.sha512",
     "/Users/glacie/.nuget/packages/melanchall.drywetmidi/8.0.3/melanchall.drywetmidi.8.0.3.nupkg.sha512",
     "/Users/glacie/.nuget/packages/meltysynth/2.4.1/meltysynth.2.4.1.nupkg.sha512",
-    "/Users/glacie/.nuget/packages/monogame.content.builder.task/3.8.5.1/monogame.content.builder.task.3.8.5.1.nupkg.sha512",
-    "/Users/glacie/.nuget/packages/monogame.framework.desktopgl/3.8.5.1/monogame.framework.desktopgl.3.8.5.1.nupkg.sha512",
+    "/Users/glacie/.nuget/packages/monogame.content.builder.task/3.8.6/monogame.content.builder.task.3.8.6.nupkg.sha512",
+    "/Users/glacie/.nuget/packages/monogame.framework.desktopgl/3.8.6/monogame.framework.desktopgl.3.8.6.nupkg.sha512",
     "/Users/glacie/.nuget/packages/monogame.library.openal/1.24.3.4/monogame.library.openal.1.24.3.4.nupkg.sha512",
     "/Users/glacie/.nuget/packages/monogame.library.sdl/2.32.10.2/monogame.library.sdl.2.32.10.2.nupkg.sha512",
     "/Users/glacie/.nuget/packages/nvorbis/0.10.4/nvorbis.0.10.4.nupkg.sha512",

@@ -1,7 +1,19 @@
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/libopenmpt.dylib
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.ogg
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/silkscreen.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/slkscr.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_BLOCK_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_COLLISION_TEST.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ARROW.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_BG_TEST.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ICE_BLOCK.xnb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_FLOATINGDEPTHS.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_GUSTYGARDEN.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/smg2_honeybloom_galaxy.mid
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SOUNDBANK.sf2
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_BLOCK_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_COLLISION_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native32.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall_DryWetMidi_Native64.dll
@@ -11,11 +23,17 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.runtimeconfig.json
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Project Snowflake.pdb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/LibOpenMPT.NET.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Melanchall.DryWetMidi.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MeltySynth.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/MonoGame.Framework.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/NVorbis.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/TiledCS.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/libopenmpt.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/openmpt-mpg123.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/openmpt-ogg.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/openmpt-vorbis.dll
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/win-x64/native/openmpt-zlib.dll
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm/native/libopenal.so
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-arm64/native/libopenal.so
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/runtimes/android-x64/native/libopenal.so
@@ -45,14 +63,31 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.pdb
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.genruntimeconfig.cache
 /Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/ref/Project Snowflake.dll
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/FONTS/silkscreen.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.ogg
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/BGM/BGM_TEST.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_FLOATINGDEPTHS.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SEQ_GUSTYGARDEN.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/smg2_honeybloom_galaxy.mid
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/MIDI/SOUNDBANK.sf2
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_COLLISION_TEST.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/SPR_ICE_BLOCK.xnb
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_BLOCK_TEST.tmx
-/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/GFX/MAPS/MAP_BLOCK_TEST.xnb
+/tmp/diagbuild/libopenmpt.dylib
+/tmp/diagbuild/Content/BGM/BGM_TEST.ogg
+/tmp/diagbuild/Content/BGM/BGM_TEST.xnb
+/tmp/diagbuild/Content/FONTS/silkscreen.xnb
+/tmp/diagbuild/Content/FONTS/slkscr.xnb
+/tmp/diagbuild/Content/GFX/MAPS/MAP_BLOCK_TEST.xnb
+/tmp/diagbuild/Content/GFX/MAPS/MAP_COLLISION_TEST.xnb
+/tmp/diagbuild/Content/GFX/SPR_ARROW.xnb
+/tmp/diagbuild/Content/GFX/SPR_BG_TEST.xnb
+/tmp/diagbuild/Content/GFX/SPR_ICE_BLOCK.xnb
+/tmp/diagbuild/Content/GFX/SPR_SNOWFLAKE_STATIC.xnb
+/tmp/diagbuild/Content/MIDI/SEQ_FLOATINGDEPTHS.mid
+/tmp/diagbuild/Content/MIDI/SEQ_GUSTYGARDEN.mid
+/tmp/diagbuild/Content/MIDI/smg2_honeybloom_galaxy.mid
+/tmp/diagbuild/Content/MIDI/SOUNDBANK.sf2
+/tmp/diagbuild/Content/TILEMAPS/MAP_BLOCK_TEST.tmx
+/tmp/diagbuild/Content/TILEMAPS/MAP_COLLISION_TEST.tmx
+/tmp/diagbuild/Melanchall_DryWetMidi_Native32.dll
+/tmp/diagbuild/Melanchall_DryWetMidi_Native64.dll
+/tmp/diagbuild/Melanchall_DryWetMidi_Native64.dylib
+/tmp/diagbuild/Project Snowflake
+/tmp/diagbuild/Project Snowflake.deps.json
+/tmp/diagbuild/Project Snowflake.runtimeconfig.json
+/tmp/diagbuild/Project Snowflake.dll
+/tmp/diagbuild/Project Snowflake.pdb
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_PATROL_TEST.tmx
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/test_tileset.png
+/Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/tileset.tsx

@@ -42,7 +42,8 @@ namespace Project_Snowflake
             }
             if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter))
             {
-                AudioManager.PlayMusic("BGM_TEST", true);
+                var music = new TrackerMusicPlayer();
+                music.Play("Content/BGM/Snowflake house.xm", loop: true);
             }
             if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter))
             {

@@ -5,6 +5,7 @@
     <RollForward>Major</RollForward>
     <PublishReadyToRun>false</PublishReadyToRun>
     <TieredCompilation>false</TieredCompilation>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -23,12 +24,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LibOpenMPT.NET" Version="0.8.6" />
     <PackageReference Include="Melanchall.DryWetMidi" Version="8.0.3" />
     <PackageReference Include="MeltySynth" Version="2.4.1" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*" />
     <PackageReference Include="TiledCS" Version="3.3.3" />
   </ItemGroup>
+  <!-- Native library for libopenmpt (required for TrackerMusicPlayer) -->
+  <ItemGroup>
+    <Content Include="native/libopenmpt.dylib">
+      <Link>libopenmpt.dylib</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+
+
   <ItemGroup>
     <!-- Raw MIDI/SoundFont assets, copied as-is instead of going through the MGCB content pipeline -->
     <None Include="Content/MIDI/**/*.*">

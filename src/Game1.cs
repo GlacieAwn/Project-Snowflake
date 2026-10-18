@@ -19,6 +19,7 @@ public class Game1 : Game
     // private MidiSequencer _midiSequencer;
     private GameManager _gameManager;
     private SpriteFont _font;
+    private TrackerMusicPlayer trackerMusicPlayer;
 
     public Game1()
     {
@@ -41,8 +42,8 @@ public class Game1 : Game
         }
         else
         {
-            _graphics.PreferredBackBufferWidth = Global.WINDOW_WIDTH * 4; 
-            _graphics.PreferredBackBufferHeight = Global.WINDOW_HEIGHT * 4;
+            _graphics.PreferredBackBufferWidth = Global.WINDOW_WIDTH * 6; 
+            _graphics.PreferredBackBufferHeight = Global.WINDOW_HEIGHT * 6;
         }
         
         _graphics.ApplyChanges();
@@ -112,9 +113,9 @@ public class Game1 : Game
         _spriteBatch.End();
 
         GraphicsDevice.SetRenderTarget(null);
-        scaleX = (float)_graphics.PreferredBackBufferWidth / Global.SCREEN_WIDTH;
-        scaleY = (float)_graphics.PreferredBackBufferHeight / Global.SCREEN_HEIGHT;
-        float scale = Math.Min(scaleX, scaleY);
+        int scaleX = _graphics.PreferredBackBufferWidth / Global.SCREEN_WIDTH;
+        int scaleY = _graphics.PreferredBackBufferHeight / Global.SCREEN_HEIGHT;
+        int scale = Math.Min(scaleX, scaleY);
         
         dst = new Rectangle((GraphicsDevice.PresentationParameters.BackBufferWidth - (int)(Global.SCREEN_WIDTH * scale)) / 2, (GraphicsDevice.PresentationParameters.BackBufferHeight - (int)(Global.SCREEN_HEIGHT * scale)) / 2, (int)(Global.SCREEN_WIDTH * scale), (int)(Global.SCREEN_HEIGHT * scale));
         GraphicsDevice.Clear(Color.Black);

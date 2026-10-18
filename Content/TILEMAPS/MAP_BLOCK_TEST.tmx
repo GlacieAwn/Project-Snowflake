@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="17" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="8">
- <tileset firstgid="1" source="../../../../../test_tileset.tsx"/>
- <layer id="1" name="Ground" width="17" height="10">
+<map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="8">
+ <tileset firstgid="1" source="tileset.tsx"/>
+ <layer id="1" name="Ground" width="15" height="10">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="3" name="Collision" width="17" height="10">
+ <layer id="3" name="Collision" width="15" height="10">
   <data encoding="csv">
-0,0,0,2,2,2,2,2,2,2,2,2,2,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,0,0,0,0,0,0,0,0,0,2,0,0,0,
-0,0,0,2,2,2,2,2,2,2,2,2,2,2,0,0,0
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,1,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,0,0,0,0,0,0,0,0,0,0,0,0,0,2,
+2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
 </data>
  </layer>
  <objectgroup id="2" name="Objects">
-  <object id="2" name="Player_Start" x="128" y="112">
+  <object id="2" name="Player_Start" x="112" y="112">
    <point/>
   </object>
-  <object id="3" name="Block_1" type="Block" x="96" y="48">
+  <object id="3" name="Block_1" type="Block" x="64" y="64">
    <point/>
   </object>
-  <object id="6" name="Block_2" type="Block" x="176" y="48">
+  <object id="6" name="Block_2" type="Block" x="160" y="64">
    <point/>
   </object>
-  <object id="7" name="Block_3" type="Block" x="176" y="112">
+  <object id="7" name="Block_3" type="Block" x="112" y="80">
    <point/>
   </object>
  </objectgroup>

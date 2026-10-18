@@ -17,15 +17,18 @@ namespace Project_Snowflake
         public ObjectManager objectManager { get; private set; }
         public DebugMenu debugMenu { get; private set; }
         public Global.GameState State { get; private set; } = Global.GameState.DebugMenu;
+        public TrackerMusicPlayer trackerMusicPlayer { get; private set; }
 
         public GameManager(ContentManager content, GraphicsDevice graphicsDevice, InputManager inputManager)
         {
             _content = content;
             _graphicsDevice = graphicsDevice;
             _inputManager = inputManager;
+            trackerMusicPlayer = new TrackerMusicPlayer();
             levelManager = new LevelManager();
             objectManager = new ObjectManager();
             debugMenu = new DebugMenu(graphicsDevice);
+
         }
 
         public void Update(GameTime gameTime)

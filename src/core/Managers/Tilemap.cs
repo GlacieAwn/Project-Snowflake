@@ -14,12 +14,12 @@ namespace Project_Snowflake
         private TiledMap _map;
         private TiledLayer _collisionLayer;
         public TiledLayer _objectLayer;
-        private Texture2D _mapRender;
+        private Texture2D _tileset;
 
-        public Tilemap(string mapPath, string mapRenderPath, GraphicsDevice graphicsDevice)
+        public Tilemap(string mapPath, string tilesetPath, GraphicsDevice graphicsDevice)
         {
             _map = new TiledMap(mapPath);
-            _mapRender = Texture2D.FromFile(graphicsDevice, mapRenderPath);
+            _tileset = Texture2D.FromFile(graphicsDevice, tilesetPath);
 
             _collisionLayer = _map.Layers.First(layer => layer.name == "Collision");
             _objectLayer = _map.Layers.First(layer => layer.name == "Objects");
@@ -72,13 +72,35 @@ namespace Project_Snowflake
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_mapRender, Vector2.Zero, Color.White);
+            foreach (TiledLayer layer in _map.Layers.Where(layer => layer.type == TiledLayerType.TileLayer))
+            {
+                for (int y = 0; y < layer.height; y++)
+                {
+                    for (int x = 0; x < layer.width; x++)
+                    {
+                        int gid = layer.data[y * layer.width + x];
+                        if (gid == 0) continue;
+
+                        int tileWidth = _map.TileWidth;
+                        int tileHeight = _map.TileHeight;
+                        int tilesetWidth = _tileset.Width;
+
+                        int sourceX = ((gid - 1) * tileWidth) % tilesetWidth;
+                        int sourceY = ((gid - 1) * tileWidth) / tilesetWidth * tileHeight;
+
+                        Rectangle sourceRect = new Rectangle(sourceX, sourceY, tileWidth, tileHeight);
+                        Vector2 position = new Vector2(x * tileWidth, y * tileHeight);
+
+                        spriteBatch.Draw(_tileset, position, sourceRect, Color.White);
+                    }
+                }
+            }
         }
 
         public void Dispose()
         {
-            _mapRender?.Dispose();
-            _mapRender = null;
+            _tileset?.Dispose();
+            _tileset = null;
             _collisionLayer = null;
             _map = null;
         }
