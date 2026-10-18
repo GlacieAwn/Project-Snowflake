@@ -16,8 +16,8 @@ namespace Project_Snowflake
             LEVEL_4,
             LEVEL_5,
             LEVEL_6,
-            BLOCK_TEST,
             COLLISION_TEST,
+            BLOCK_TEST,
             PATROL_TEST
 
         }

@@ -18,7 +18,7 @@ namespace Project_Snowflake
 
         public DebugMenu(GraphicsDevice graphicsDevice)
         {
-            _options = new string[] {"MAP_COLLISION_TEST", "TITLE", "MUSIC_TEST", "SFX_TEST"};
+            _options = new string[] {"GAMEPLAY", "TITLE", "MUSIC_TEST", "SFX_TEST"};
             _selectedIndex = 0;
             _arrow = Texture2D.FromFile(graphicsDevice, "Content/GFX/SPR_ARROW.png");
             _music = new TrackerMusicPlayer();

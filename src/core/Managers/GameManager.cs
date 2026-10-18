@@ -10,7 +10,7 @@ namespace Project_Snowflake
         private readonly ContentManager _content;
         private readonly GraphicsDevice _graphicsDevice;
         private readonly InputManager _inputManager;
-        public LevelManager.Level _currentLevel = LevelManager.Level.PATROL_TEST;
+        public LevelManager.Level _currentLevel = LevelManager.Level.COLLISION_TEST;
 
         public LevelManager levelManager { get; private set; }
         public ObjectManager objectManager { get; private set; }
