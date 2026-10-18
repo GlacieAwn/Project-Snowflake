@@ -45,8 +45,6 @@ namespace Project_Snowflake
         {
             foreach (var obj in _objectLayer.objects)
             {
-                // Here you would typically create the appropriate game object based on the TiledObject
-                // For example, if you have a MoveableBlock class:
                 if (obj.type == "Block" || obj.@class == "Block") // TiledCS 3.3.3 reads the .tmx "type" attribute into obj.type
                 {
                     MoveableBlock block = new MoveableBlock(new Vector2(obj.x, obj.y), this, objectManager, contentManager);
