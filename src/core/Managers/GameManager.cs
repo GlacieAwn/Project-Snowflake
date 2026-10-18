@@ -10,7 +10,6 @@ namespace Project_Snowflake
         private readonly ContentManager _content;
         private readonly GraphicsDevice _graphicsDevice;
         private readonly InputManager _inputManager;
-        private Player _player;
         public LevelManager.Level _currentLevel = LevelManager.Level.PATROL_TEST;
 
         public LevelManager levelManager { get; private set; }
@@ -39,7 +38,6 @@ namespace Project_Snowflake
             switch (State)
             {
                 case Global.GameState.Playing:
-                    _player?.Update(gameTime, _inputManager);
                     objectManager.Update(gameTime);
                     break;
                 case Global.GameState.DebugMenu:
@@ -59,12 +57,12 @@ namespace Project_Snowflake
         public void StartLevel(LevelManager.Level level)
         {
             _currentLevel = level;
-            _player?.Dispose();
+            objectManager.DisposeObjects();
             // ObjectManager has no clear method, so a fresh one is used per level.
             objectManager = new ObjectManager();
             levelManager.LoadLevel(level, _graphicsDevice);
             levelManager._currentTilemap.LoadObjects(objectManager, _content);
-            _player = new Player(levelManager._currentTilemap.GetObjectPosition("Player_Start"), levelManager._currentTilemap, objectManager, _content);
+            new Player(levelManager._currentTilemap.GetObjectPosition("Player_Start"), levelManager._currentTilemap, objectManager, _content, _inputManager);
         }
 
         // Draws gameplay into the currently bound render target.
@@ -74,14 +72,12 @@ namespace Project_Snowflake
                 return;
 
             levelManager._currentTilemap.Draw(spriteBatch);
-            _player?.Draw(spriteBatch);
             objectManager.Draw(spriteBatch);
         }
 
         public void Unload()
         {
-            _player?.Dispose();
-            _player = null;
+            objectManager.DisposeObjects();
             levelManager.UnloadLevel();
         }
     }

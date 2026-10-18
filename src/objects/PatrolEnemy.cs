@@ -11,8 +11,6 @@ public class PatrolEnemy : GameObject
     private Vector2 _position;
     private int _stepCount = 0;
     private int _maxSteps = 1;
-    private Texture2D _texture;
-    private ContentManager _contentManager;
     private static ObjectManager _objectManager; // reference to the object, not actually using it here
 
 
@@ -25,8 +23,9 @@ public class PatrolEnemy : GameObject
         _maxSteps = maxSteps;
         _position = startPos;
         _objectManager = objectManager;
-        _contentManager = contentManager;
-        _texture = _contentManager.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
+        Content = contentManager;
+        TexturePath = "GFX/SPR_SNOWFLAKE_STATIC";
+        ReloadTexture();
 
         _objectManager.AddObject(this);
     }
@@ -51,7 +50,7 @@ public class PatrolEnemy : GameObject
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(_texture, _position, Color.White);
+        spriteBatch.Draw(Texture, _position, Color.White);
     }
 
     private void TryStep()

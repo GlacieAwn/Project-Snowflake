@@ -18,6 +18,22 @@ namespace Project_Snowflake
             _gameObjects.Add(gameObject);
         }
 
+        public void DisposeObjects()
+        {
+            foreach (var gameObject in _gameObjects)
+            {
+                gameObject.DisposeTexture();
+            }
+        }
+
+        public void ReloadObjects()
+        {
+            foreach (var gameObject in _gameObjects)
+            {
+                gameObject.ReloadTexture();
+            }
+        }
+
         public void Update(GameTime gameTime)
         {
             foreach (var gameObject in _gameObjects)

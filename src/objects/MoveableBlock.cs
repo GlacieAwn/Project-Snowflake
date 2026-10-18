@@ -9,9 +9,7 @@ namespace Project_Snowflake;
 
 public class MoveableBlock : GameObject
 {
-    private Texture2D _texture;
     private Tilemap _tilemap;
-    private ContentManager _contentManager;
     private static ObjectManager _objectManager; // reference to the object, not actually using it here
 
     public MoveableBlock(Vector2 startPosition, Tilemap tilemap, ObjectManager objectManager, ContentManager contentManager)
@@ -19,8 +17,9 @@ public class MoveableBlock : GameObject
         Position = startPosition;
         _tilemap = tilemap;
         _objectManager = objectManager;
-        _contentManager = contentManager;
-        _texture = contentManager.Load<Texture2D>("GFX/SPR_ICE_BLOCK");
+        Content = contentManager;
+        TexturePath = "GFX/SPR_ICE_BLOCK";
+        ReloadTexture();
 
         _objectManager.AddObject(this);
 
@@ -46,7 +45,7 @@ public class MoveableBlock : GameObject
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(_texture, Position, Color.White);
+        spriteBatch.Draw(Texture, Position, Color.White);
     }
 
     public void Add(TiledObject obj, Tilemap tilemap)
