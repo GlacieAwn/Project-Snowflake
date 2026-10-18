@@ -2,6 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Project_Snowflake
 { 
@@ -10,14 +11,17 @@ namespace Project_Snowflake
         private string[] _options;
         private int _selectedIndex;
         private Texture2D _arrow;
+        private TrackerMusicPlayer _music;
+        private bool isPlaying = false;
 
         const int MENU_SPACING = 32;
 
         public DebugMenu(GraphicsDevice graphicsDevice)
         {
-            _options = new string[] {"MAP_COLLISION_TEST", "TITLE", "MUSIC_TEST", "SFX_TEST", "MIDI_TEST"};
+            _options = new string[] {"MAP_COLLISION_TEST", "TITLE", "MUSIC_TEST", "SFX_TEST"};
             _selectedIndex = 0;
             _arrow = Texture2D.FromFile(graphicsDevice, "Content/GFX/SPR_ARROW.png");
+            _music = new TrackerMusicPlayer();
         }
 
         public void Update(InputManager inputManager, ref Global.GameState gameState, ref LevelManager.Level currentLevel)
@@ -42,16 +46,22 @@ namespace Project_Snowflake
             }
             if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter))
             {
-                var music = new TrackerMusicPlayer();
-                music.Play("Content/BGM/Snowflake house.xm", loop: true);
+                if (!isPlaying)
+                {
+                    isPlaying = true; 
+                    _music.Play("Content/Audio/BGM/Snowflake house.xm", loop: true);
+                }
+                else
+                {
+                    isPlaying = false;
+                    _music.Stop();
+                }
             }
             if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter))
             {
                 // Handle the action for the fourth menu option
-            }
-            if (_selectedIndex == 4 && inputManager.IsKeyPressed(Keys.Enter))
-            {
-                // Handle the action for the fifth menu option
+                SoundEffect effect = SoundEffect.FromFile("Content/Audio/SFX/SFX_TEST.wav");
+                effect.Play();
             }
         }
 

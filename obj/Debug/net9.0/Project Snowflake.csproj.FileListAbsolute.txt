@@ -91,3 +91,4 @@
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/MAP_PATROL_TEST.tmx
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/test_tileset.png
 /Users/glacie/proj/Monogame Projects/Project Snowflake/bin/Debug/net9.0/Content/TILEMAPS/tileset.tsx
+/Users/glacie/proj/Monogame Projects/Project Snowflake/obj/Debug/net9.0/Project Snowflake.sourcelink.json
