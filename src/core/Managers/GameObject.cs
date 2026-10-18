@@ -5,5 +5,6 @@ public abstract class GameObject
 {
     public Vector2 Position { get; protected set; }
 
+    public abstract void Update(GameTime gameTime);
     public abstract void Draw(SpriteBatch spriteBatch);
 }

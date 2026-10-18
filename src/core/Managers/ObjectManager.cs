@@ -18,6 +18,14 @@ namespace Project_Snowflake
             _gameObjects.Add(gameObject);
         }
 
+        public void Update(GameTime gameTime)
+        {
+            foreach (var gameObject in _gameObjects)
+            {
+                gameObject.Update(gameTime);
+            }
+        }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             foreach (var gameObject in _gameObjects)

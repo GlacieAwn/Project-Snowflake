@@ -39,6 +39,11 @@ public class MoveableBlock : GameObject
         return false;
     }
 
+    public override void Update(GameTime gameTime)
+    {
+        // NOT USED, ONLY HERE FOR COMPATIBILITY WITH GAMEOBJECT CLASS THINGY
+    }
+
     public override void Draw(SpriteBatch spriteBatch)
     {
         spriteBatch.Draw(_texture, Position, Color.White);
