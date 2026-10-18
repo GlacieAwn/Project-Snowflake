@@ -6,10 +6,6 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace Project_Snowflake
 {
-    /// <summary>
-    /// Streams tracker modules (MOD, S3M, IT, XM, ...) decoded by libopenmpt
-    /// into a DynamicSoundEffectInstance from a background thread.
-    /// </summary>
     public sealed unsafe class TrackerMusicPlayer : IDisposable
     {
         private const int SampleRate = 48000;
