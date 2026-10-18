@@ -35,6 +35,16 @@ namespace Project_Snowflake
                 _selectedIndex = (_selectedIndex + 1) % _options.Length;
             }
 
+            int levelCount = Enum.GetValues(typeof(LevelManager.Level)).Length;
+            if (inputManager.IsKeyPressed(Keys.Left))
+            {
+                currentLevel = (LevelManager.Level)(((int)currentLevel - 1 + levelCount) % levelCount);
+            }
+            else if (inputManager.IsKeyPressed(Keys.Right))
+            {
+                currentLevel = (LevelManager.Level)(((int)currentLevel + 1) % levelCount);
+            }
+
             if (_selectedIndex == 0 && inputManager.IsKeyPressed(Keys.Enter))
             {
                 gameState = Global.GameState.Playing;
@@ -65,15 +75,16 @@ namespace Project_Snowflake
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, SpriteFont font, Vector2 position)
+        public void Draw(SpriteBatch spriteBatch, SpriteFont font, Vector2 position, LevelManager.Level currentLevel)
         {
+            spriteBatch.DrawString(font, "< " + currentLevel.ToString() + " >", position + new Vector2(32, 0), Color.White);
             for (int i = 0; i < _options.Length; i++)
             {
                 Color color = Color.White;
-                spriteBatch.DrawString(font, _options[i], position + new Vector2(32, i * MENU_SPACING), color);
+                spriteBatch.DrawString(font, _options[i], position + new Vector2(32, (i + 1) * MENU_SPACING), color);
                 if (i == _selectedIndex)
                 {
-                    spriteBatch.Draw(_arrow, position + new Vector2(0, i * MENU_SPACING), Color.White);
+                    spriteBatch.Draw(_arrow, position + new Vector2(0, (i + 1) * MENU_SPACING), Color.White);
                 }
             }
         }

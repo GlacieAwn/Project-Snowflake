@@ -70,11 +70,11 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         _inputManager.Update();
+        _gameManager.Update(gameTime);
         
         if (_inputManager.IsButtonPressed(Buttons.Back) || _inputManager.IsKeyPressed(Keys.Escape))
             Exit();
 
-        _gameManager.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -143,7 +143,7 @@ public class Game1 : Game
             case Global.GameState.DebugMenu:
                 // Draw debug menu
                 GraphicsDevice.Clear(Color.Black);
-                _gameManager.debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10));
+                _gameManager.debugMenu.Draw(_spriteBatch, _font, new Vector2(10, 10), _gameManager._currentLevel);
                 break;
         }  
         _spriteBatch.End();

@@ -10,20 +10,21 @@ public class PatrolEnemy : GameObject
     private Vector2 _direction;
     private Vector2 _position;
     private int _stepCount = 0;
-    private int _maxSteps = 2;
+    private int _maxSteps = 1;
     private Texture2D _texture;
     private ContentManager _contentManager;
     private static ObjectManager _objectManager; // reference to the object, not actually using it here
 
 
     private float _moveTimer = 0.0f;
-    private float _moveInterval = 1f;
+    private float _moveInterval = 0.5f;
 
-    public PatrolEnemy(Vector2 startPos, Vector2 direction, int maxSteps, ContentManager contentManager)
+    public PatrolEnemy(Vector2 startPos, Vector2 direction, int maxSteps, ObjectManager objectManager, ContentManager contentManager)
     {
         _direction = direction;
         _maxSteps = maxSteps;
         _position = startPos;
+        _objectManager = objectManager;
         _contentManager = contentManager;
         _texture = _contentManager.Load<Texture2D>("GFX/SPR_SNOWFLAKE_STATIC");
 
@@ -32,12 +33,13 @@ public class PatrolEnemy : GameObject
 
     public override void Update(GameTime gameTime)
     {
+
         _moveTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
         if (_moveTimer >= _moveInterval)
         {
             _moveTimer = 0.0f;
             _stepCount++;
-            _position += _direction * Global.TILE_SIZE;
+            _position += _direction * (_stepCount < _maxSteps ? 1 : -1) * Global.TILE_SIZE;
             if (_stepCount >= _maxSteps)
             {
                 _stepCount = 0;

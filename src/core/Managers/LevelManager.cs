@@ -17,14 +17,15 @@ namespace Project_Snowflake
             LEVEL_5,
             LEVEL_6,
             BLOCK_TEST,
-            COLLISION_TEST
+            COLLISION_TEST,
+            PATROL_TEST
 
         }
         public Level _currentLevel;
         public Tilemap _currentTilemap;
 
-        public  string _mapPath;
-        public  string _tilesetPath;
+        public string _mapPath;
+        public string _tilesetPath;
 
         public  void LoadLevel(Level level)
         {

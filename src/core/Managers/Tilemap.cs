@@ -49,7 +49,7 @@ namespace Project_Snowflake
                 }
                 else if (obj.type == "PatrolEnemy" || obj.@class == "PatrolEnemy")
                 {
-                    PatrolEnemy enemy = new PatrolEnemy(new Vector2(obj.x, obj.y), new Vector2(1, 0), 2, contentManager);
+                    PatrolEnemy enemy = new PatrolEnemy(new Vector2(obj.x, obj.y), new Vector2(1, 0), 2, objectManager, contentManager);
                 }
             }
         }

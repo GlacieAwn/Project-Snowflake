@@ -11,7 +11,7 @@ namespace Project_Snowflake
         private readonly GraphicsDevice _graphicsDevice;
         private readonly InputManager _inputManager;
         private Player _player;
-        private LevelManager.Level _currentLevel = LevelManager.Level.BLOCK_TEST;
+        public LevelManager.Level _currentLevel = LevelManager.Level.PATROL_TEST;
 
         public LevelManager levelManager { get; private set; }
         public ObjectManager objectManager { get; private set; }
@@ -40,6 +40,7 @@ namespace Project_Snowflake
             {
                 case Global.GameState.Playing:
                     _player?.Update(gameTime, _inputManager);
+                    objectManager.Update(gameTime);
                     break;
                 case Global.GameState.DebugMenu:
                     var state = State;
