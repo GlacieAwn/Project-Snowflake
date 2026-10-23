@@ -32,7 +32,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        _graphics.IsFullScreen = false;
+        _graphics.IsFullScreen = true;
         _graphics.HardwareModeSwitch = false;
 
         if(_graphics.IsFullScreen)
