@@ -35,19 +35,19 @@ public sealed class Player : GameObject
 
     _direction = Vector2.Zero;
 
-    if (_inputManager.IsKeyPressed(Keys.W))
+    if (_inputManager.IsKeyPressed(Keys.W) || _inputManager.IsButtonPressed(Buttons.DPadUp))
     {
         _direction = new Vector2(0, -1);
     }
-    else if (_inputManager.IsKeyPressed(Keys.S))
+    else if (_inputManager.IsKeyPressed(Keys.S) || _inputManager.IsButtonPressed(Buttons.DPadDown))
     {
         _direction = new Vector2(0, 1);
     }
-    else if (_inputManager.IsKeyPressed(Keys.A))
+    else if (_inputManager.IsKeyPressed(Keys.A) || _inputManager.IsButtonPressed(Buttons.DPadLeft))
     {
         _direction = new Vector2(-1, 0);
     }
-    else if (_inputManager.IsKeyPressed(Keys.D))
+    else if (_inputManager.IsKeyPressed(Keys.D) || _inputManager.IsButtonPressed(Buttons.DPadRight))
     {
         _direction = new Vector2(1, 0);
     }

@@ -26,35 +26,35 @@ namespace Project_Snowflake
 
         public void Update(InputManager inputManager, ref Global.GameState gameState, ref LevelManager.Level currentLevel)
         {
-            if (inputManager.IsKeyPressed(Keys.W))
+            if (inputManager.IsKeyPressed(Keys.W) || inputManager.IsButtonPressed(Buttons.DPadUp))
             {
                 _selectedIndex = (_selectedIndex - 1 + _options.Length) % _options.Length;
             }
-            else if (inputManager.IsKeyPressed(Keys.S))
+            else if (inputManager.IsKeyPressed(Keys.S) || inputManager.IsButtonPressed(Buttons.DPadDown))
             {
                 _selectedIndex = (_selectedIndex + 1) % _options.Length;
             }
 
             int levelCount = Enum.GetValues(typeof(LevelManager.Level)).Length;
-            if (inputManager.IsKeyPressed(Keys.Left))
+            if (inputManager.IsKeyPressed(Keys.Left) || inputManager.IsButtonPressed(Buttons.DPadLeft))
             {
                 currentLevel = (LevelManager.Level)(((int)currentLevel - 1 + levelCount) % levelCount);
             }
-            else if (inputManager.IsKeyPressed(Keys.Right))
+            else if (inputManager.IsKeyPressed(Keys.Right) || inputManager.IsButtonPressed(Buttons.DPadRight))
             {
                 currentLevel = (LevelManager.Level)(((int)currentLevel + 1) % levelCount);
             }
 
-            if (_selectedIndex == 0 && inputManager.IsKeyPressed(Keys.Enter))
+            if (_selectedIndex == 0 && inputManager.IsKeyPressed(Keys.Enter) || _selectedIndex == 0 && inputManager.IsButtonPressed(Buttons.A))
             {
                 gameState = Global.GameState.Playing;
             }
-            if (_selectedIndex == 1 && inputManager.IsKeyPressed(Keys.Enter))
+            if (_selectedIndex == 1 && inputManager.IsKeyPressed(Keys.Enter) | _selectedIndex == 1 && inputManager.IsButtonPressed(Buttons.A))
             {
                 // Handle the action for the second menu option
                 gameState = Global.GameState.Title;
             }
-            if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter))
+            if (_selectedIndex == 2 && inputManager.IsKeyPressed(Keys.Enter) || _selectedIndex == 2 && inputManager.IsButtonPressed(Buttons.A))
             {
                 if (!isPlaying)
                 {
@@ -67,7 +67,7 @@ namespace Project_Snowflake
                     _music.Stop();
                 }
             }
-            if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter))
+            if (_selectedIndex == 3 && inputManager.IsKeyPressed(Keys.Enter) || _selectedIndex == 3 && inputManager.IsButtonPressed(Buttons.A))
             {
                 // Handle the action for the fourth menu option
                 SoundEffect effect = SoundEffect.FromFile("Content/Audio/SFX/SFX_TEST.wav");
